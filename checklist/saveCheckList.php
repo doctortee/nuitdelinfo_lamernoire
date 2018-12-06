@@ -1,13 +1,9 @@
 <?php
-echo $_POST;
-$fichier = fopen("./checklist.xml", "r");
-if ($fichier) {
-    while (($buffer = fgets($fichier, 4096)) !== false) {
-        echo $buffer;
-    }
-    if (!feof($fichier)) {
-        echo "Erreur: fgets() a échoué\n";
-    }
+print_r($_POST[test]);
+$fichier = fopen("./checklist.xml", "w");
+if ($fichier)
+{
+    $buffer = fwrite($fichier, $_POST[test]);
     fclose($fichier);
 }
 ?>
