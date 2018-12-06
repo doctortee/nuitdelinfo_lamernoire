@@ -1,0 +1,15 @@
+div {
+    background-color: lightblue;
+    width: 300px;
+    border: 10px solid blue;
+    padding: 25px;
+    margin: 2%;
+    display: inline-block;
+  }
+
+ #icon {
+
+   width: 10%;
+   height: 10%;
+   
+ }
