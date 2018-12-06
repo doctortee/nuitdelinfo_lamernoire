@@ -26,9 +26,14 @@
 </body>
 <script>
 var text = document.getElementById("xmlcontent").value;
-alert(text)
+//alert(text)
 var parser = new DOMParser();
 var xmlDoc = parser.parseFromString(text, "text/xml")
-alert(xmlDoc.documentElement)
+var txt=""
+x = xmlDoc.documentElement.childNodes;
+for (i = 0; i < x.length ;i++) {
+    txt += x[i].nodeName + ": " + x[i].childNodes[0].childNodes[0].childNodes[0].nodeValue + "<br>";
+}
+alert(txt)
 </script>
 </html>
