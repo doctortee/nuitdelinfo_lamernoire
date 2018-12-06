@@ -1,13 +1,32 @@
 <xml>
-<title>MyOwnCheckList</title>
-<body>
-<entry>
-<name>Verifier les reacteurs</name>
-<content>Verifier le reacteur A et B</content>
-</entry>
-<entry>
-<name>Demarrer les propulseurs</name>
-<content>Demarrer les 2 propulseurs</content>
-</entry>
-</body>
+  <checklist name="daily">
+    <task>
+      <name>Tache quotidienne 1</name>
+      <description>Description 1</description>
+    </task>
+    <task>
+      <name>Tache quotidienne 2</name>
+      <description>Description 2</description>
+    </task>
+  </checklist>
+  <checklist name="simple">
+    <task>
+      <name>Tache simple 1</name>
+      <description>Description 1</description>
+    </task>
+    <task>
+      <name>Tache simple 2</name>
+      <description>Description 2</description>
+    </task>
+  </checklist>
+  <checklist name="ended">
+    <task>
+      <name>Tache finie 1</name>
+      <description>Description 1</description>
+    </task>
+    <task>
+      <name>Tache finie 2</name>
+      <description>Description 2</description>
+    </task>
+  </checklist>
 </xml>

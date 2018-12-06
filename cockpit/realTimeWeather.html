@@ -3,9 +3,41 @@
     <TITLE>Météo en temps Réel</TITLE>
     <meta charset="utf-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <script type="text/javascript">
+    window.onload=function() {
+      horloge('div_horloge');
+    };
+
+    function horloge(el) {
+      if(typeof el=="string") { el = document.getElementById(el); }
+      function actualiser() {
+        var date = new Date();
+        var str = date.getHours();
+        str += ':'+(date.getMinutes()<10?'0':'')+date.getMinutes();
+        el.innerHTML = str;
+      }
+      actualiser();
+      setInterval(actualiser,1000);
+    }
+    </script>
   </HEAD>
   <BODY>
     <!-- Section d'implémentation du Saint API, Amen -->
-    
+    <TABLE>
+      <tr>
+        <td>
+          <div id="div_horloge"></div>
+        </td>
+        <td>
+        </td>
+      </tr>
+      <tr>
+        <td>
+        </td>
+        <td>
+        </td>
+      </tr>
+    </table>
+    <div id="cont_e5ad430a0ed3bba5db0501d943f82577"><script type="text/javascript" async src="https://www.tameteo.com/wid_loader/e5ad430a0ed3bba5db0501d943f82577"></script></div>
   </BODY>
 </HTML>
