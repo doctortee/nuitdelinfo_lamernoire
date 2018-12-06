@@ -10,6 +10,13 @@ ul.ulMenu {
   background-color: #333;
 }
 
+a,a:hover {
+  color : #FFF;
+  text-decoration: none;
+}
+
+ul.ulMenu a:focus {background-color: #4CAF50;}
+
 ul.ulMenu li {
   float: left;
 
@@ -23,9 +30,9 @@ ul.ulMenu li{
   text-decoration: none;
 }
 
-ul.ulMenu li:hover:not(.active) {background-color: #111;}
+ul.ulMenu li:hover {background-color: #111;}
 
-ul.ulMenu li.active {background-color: #4CAF50;}
+ul.ulMenu a:focus li {background-color: #4CAF50;}
 
 ul.ulMenu li.right {float: right;}
 
