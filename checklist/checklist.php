@@ -29,7 +29,7 @@ var text = document.getElementById("xmlcontent");
 var parser = new DOMParser();
 var xmlDoc = parser.parseFromString(text, "text/xml")
 for (e in xmlDoc) {
-  alert(e.childNodes[0])
+  alert(e)
 }
 </script>
 </html>
