@@ -26,10 +26,9 @@
 </body>
 <script>
 var text = document.getElementById("xmlcontent").value;
+alert(text)
 var parser = new DOMParser();
 var xmlDoc = parser.parseFromString(text, "text/xml")
-for (e in xmlDoc) {
-  alert(e.documentElement)
-}
+alert(xmlDoc.documentElement)
 </script>
 </html>
