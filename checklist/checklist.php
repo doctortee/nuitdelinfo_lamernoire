@@ -13,18 +13,19 @@
 </form>
 </body>
 <script>
-var text = "<?php
+var text = '<?php
 $fichier = fopen("./checklist.xml", "r");
 if ($fichier) {
     while (($buffer = fgets($fichier, 4096)) !== false) {
-        echo $buffer;
+        $buffer = preg_replace('#\R+#', '\\\n', $buffer);
+        echo $buffer."\\";
     }
     if (!feof($fichier)) {
         echo "Erreur: fgets() a échoué\n";
     }
     fclose($fichier);
 }
-?>"
+?>'
 //var text = document.getElementById("xmlcontent");
 var parser = new DOMParser();
 var xmlDoc = parser.parseFromString(text, "text/xml")
