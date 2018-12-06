@@ -12,7 +12,7 @@
 <footer>
   <script>
 var xhr = new XMLHttpRequest();
-xhr.open('POST', 'http://sigmachine.ca/getCheckList.php');
+xhr.open('POST', 'http://sigmachine.ca/checklist/getCheckList.php');
 xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
 xhr.addEventListener('readystatechange', function() {
     if (xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200) {
