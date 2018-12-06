@@ -31,8 +31,13 @@ var parser = new DOMParser();
 var xmlDoc = parser.parseFromString(text, "text/xml")
 var txt=""
 x = xmlDoc.documentElement.childNodes;
+var currentNode = null
 for (i = 0; i < x.length ;i++) {
-    txt += x[i].nodeName + ": " + x[i].childNodes[0].childNodes[0].childNodes[0].nodeValue + "<br>";
+  currentNode = x[i]
+    //txt += currentNode.attributes// + ": " + x[i].childNodes[0].childNodes[0].childNodes[0].nodeValue + "<br>";
+    for (e in currentNode.attributes) {
+      alert(e)
+    }
 }
 alert(txt)
 </script>
