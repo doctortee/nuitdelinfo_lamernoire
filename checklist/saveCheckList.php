@@ -1,8 +1,8 @@
 <?php
-print_r($_POST);
+print_r($_POST[test]);
 $fichier = fopen("./checklist.xml", "w");
 if ($fichier) {
-    //$buffer = fwrite($fichier, $dataToSave)) !== false)
+    $buffer = fwrite($fichier, $_POST[test])) !== false)
     fclose($fichier);
 }
 ?>
