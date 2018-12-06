@@ -23,17 +23,4 @@ if ($fichier) {
   <input type="reset" value="Reload" />
 </form>
 </body>
-<footer>
-  <script>
-var xhr = new XMLHttpRequest();
-xhr.open('POST', 'http://sigmachine.ca/checklist/getCheckList.php');
-xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-xhr.addEventListener('readystatechange', function() {
-    if (xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200) {
-        alert("Really ?")
-    }
-});
-xhr.send('param1=' + 42 + '&param2=' + 27);
-</script>
-</footer>
 </html>
