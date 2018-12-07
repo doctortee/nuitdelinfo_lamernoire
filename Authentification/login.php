@@ -33,12 +33,11 @@
 				<td><label>Code secret:</label></td>
 				<td> <input type="password" name="pass" id="password" style="width:250px;height:20px;text-align:center;;font-size:15px;color:black;"></td>
 			</tr>
-			<tr>
-				<td class="valider"><input type="submit" value="Valider" style="width:125px;height:25px"></td>
-			</tr>
-			
+							
             
 		</table>
+		
+		<p><input type="submit" value="Valider" style="width:125px;height:25px"></p>
 	
 	</div>
 	<div class="erreur" id="errMsg">
