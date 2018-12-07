@@ -88,11 +88,6 @@ if ($_POST[test]) {
       <!--Fin de la table pour ajouter des évènements-->
       <h3>Tâches journalières</h3>
         <ul id="listOfTodoListDaily" class="listOfTodoList"> <!--élement test-->
-          <li>
-            <input type="checkbox" name="Element" value="">
-            <label for="Element">Faire la vaisselle <a onclick="extend()" href="#">+</a></label>
-            <p>Description lambda caché</p>
-          </li>
         </ul>
       <h3>Tâches simples</h3>
         <ul id="listOfTodoListSimple" class="listOfTodoList">

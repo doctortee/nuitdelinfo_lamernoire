@@ -20,13 +20,14 @@ function changeSection(sectionName)
 function addItemToList(list,name,description)
 {
 
-
+  name = name.replace(" ", "_")
   if (list == "input")
   {
     let listSelected = document.getElementById("selectList");
     list = eval(listSelected.children[listSelected.selectedIndex].value);
     let jsNameInput = document.getElementById("nameInput");
     name = nameInput.value;
+    name = name.replace(" ", "_")
     let jsDescriptionInput = document.getElementById("descriptionArea");
     description = descriptionArea.value;
   }
@@ -41,7 +42,7 @@ function addItemToList(list,name,description)
   labelElement.appendChild(labelTextNode);
   let aElement = document.createElement("A");
   aElement.href = "#"+name;
-  aElement.setAttribute("onclick","extend(\""+name+"\")");
+  aElement.setAttribute("onclick","extend("+name+")");
   let aTextElement = document.createTextNode(" +");
   aElement.appendChild(aTextElement);
   labelElement.appendChild(aElement);
