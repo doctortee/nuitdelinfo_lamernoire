@@ -35,6 +35,7 @@ function addItemToList(list,name,description)
   let listElement = document.createElement("LI");
   let inputCheckbox = document.createElement("INPUT");
   inputCheckbox.type = "checkbox";
+  inputCheckbox.setAttribute("onclick","delElementToList("+list+","+list.children.length+")");
   listElement.appendChild(inputCheckbox);
 
   let labelElement = document.createElement("LABEL");
