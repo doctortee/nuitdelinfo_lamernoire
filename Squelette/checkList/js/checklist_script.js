@@ -89,11 +89,16 @@ function removeFromChecklist(listNom, position){
 if (listNom == "simple") {
   delete UsableJSObject.categ.simple.name[UsableJSObject.categ.simple.name.length]
   delete UsableJSObject.categ.simple.description[UsableJSObject.categ.simple.description.length]
+
+  UsableJSObject.categ.simple.name.splice(UsableJSObject.categ.simple.name.length, 1);
+  UsableJSObject.categ.simple.description.splice(UsableJSObject.categ.simple.description.length, 1);
 }
 else
 {
   delete UsableJSObject.categ.daily.name[UsableJSObject.categ.simple.name.length]
   delete UsableJSObject.categ.daily.description[UsableJSObject.categ.simple.description.length]
+  UsableJSObject.categ.daily.name.splice(UsableJSObject.categ.daily.name.length, 1);
+  UsableJSObject.categ.simpdailyle.description.splice(UsableJSObject.categ.daily.description.length, 1); 
 }
 }
 
