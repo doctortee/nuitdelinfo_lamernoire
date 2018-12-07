@@ -94,7 +94,7 @@ if ($_POST[test]) {
 
         </ul>
         <!-- ATTENTION  Ajout pour sauvegarder -->
-          <form action="http://sigmachine.ca/checklist/main.php" method="post">
+          <form action="http://sigmachine.ca/checklist/main.php" method="post" id="fakeform">
           <textarea cols="60" rows="10" wrap="soft" name="test" id="xmlcontent" hidden>
             <?php
             $fichier = fopen("./checklist.xml", "r");
