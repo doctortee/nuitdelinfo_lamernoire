@@ -1,0 +1,10 @@
+<xml>
+  <checklist name="daily">
+    <task name="Tache quotidienne 1" value="Description 1" />
+    <task name="Tache quotidienne 2" value="Description 2" />
+  </checklist>
+  <checklist name="simple">
+    <task name="Tache simple 1" value="Description 1" />
+    <task name="Tache simple 2" value="Description 2" />
+  </checklist>
+</xml>

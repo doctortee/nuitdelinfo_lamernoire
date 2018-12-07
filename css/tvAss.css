@@ -1,0 +1,44 @@
+
+html
+{
+}
+
+ #icon {
+
+   width: auto;
+   height: 45%;
+ }
+
+#bloc1 {
+  background-color: lightblue;
+  border: 2px solid black;
+  padding: 50px;
+}
+
+#d1{
+  margin: 0 auto;
+  background-color: lightblue;
+  border: 2px solid black;
+  padding: 50px;
+  width: 100%;
+}
+
+
+#table1{
+
+  margin:auto;
+  border-spacing: 50px;
+
+}
+.canvasjs-chart-canvas
+{
+  width: fit-content !important;
+  height: fit-content !important;
+  max-width: fit-content !important;
+  max-height: fit-content !important;
+}
+
+#SectionTvAss
+{
+  margin: 0 auto;
+}
