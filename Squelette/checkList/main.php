@@ -58,7 +58,7 @@ if ($_POST[test]) {
         <table id="tableAddEvent" class="hideCheckList">
           <tr>
             <td>
-              <button type="button" onclick="addItemToList('input','input','input')" name="button">Ajouter</button>
+              <button type="button" onclick="addItemToList('input','input','input');insertToChecklist()" name="button">Ajouter</button>
             </td>
             <td>
               <select id="selectList">

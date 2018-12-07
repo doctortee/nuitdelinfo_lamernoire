@@ -61,6 +61,34 @@ function saveXMLfromChecklist() {
   //alert(txt)
 }
 
+function insertToChecklist()
+{
+  var listSelected = document.getElementById("selectList");
+  listSel = eval(listSelected.children[listSelected.selectedIndex].value);
+  if (listSet == jsListOfTodoListDaily) {
+    listSel = "daily"
+  }
+  else {
+    listSel = "simple"
+  }
+  var name = document.getElementById("nameInput").value;
+  var desc = document.getElementById("descriptionArea").value;
+  if (listSel == "simple") {
+    UsableJSObject.categ.simple.name[UsableJSObject.categ.simple.name.length] = name
+    UsableJSObject.categ.simple.description[UsableJSObject.categ.simple.description.length] = desc
+  }
+  else
+  {
+    UsableJSObject.categ.daily.name[UsableJSObject.categ.simple.name.length] = name
+    UsableJSObject.categ.daily.description[UsableJSObject.categ.simple.description.length] = desc
+  }
+}
+
+function removeFromChecklist()
+{
+
+}
+
 function createInterface(){
   for (i = 0; i < UsableJSObject.categ.simple.name.length; i++) {
     addItemToList(jsListOfTodoListSimple, UsableJSObject.categ.simple.name[i], UsableJSObject.categ.simple.description[i])
