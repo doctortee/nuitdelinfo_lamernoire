@@ -141,6 +141,6 @@ if ($_POST[test]) {
     <script>
       loadXMLAndInitChecklist()
       createInterface()
-      saveXMLfromChecklist()
+      //saveXMLfromChecklist()
     </script>
 </html>

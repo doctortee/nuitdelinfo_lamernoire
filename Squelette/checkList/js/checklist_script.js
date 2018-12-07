@@ -101,7 +101,7 @@ else
   UsableJSObject.categ.daily.description.splice(position, 1);
 }
 saveXMLfromChecklist()
-document.getElementById("fakeform").submit();
+//document.getElementById("fakeform").submit();
 }
 
 function createInterface(){
