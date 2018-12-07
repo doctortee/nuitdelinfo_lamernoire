@@ -87,20 +87,20 @@ function insertToChecklist()
 
 function removeFromChecklist(listNom, position){
 if (listNom == "simple") {
-  delete UsableJSObject.categ.simple.name[UsableJSObject.categ.simple.name.length]
-  delete UsableJSObject.categ.simple.description[UsableJSObject.categ.simple.description.length]
+  delete UsableJSObject.categ.simple.name[position]
+  delete UsableJSObject.categ.simple.description[position]
 
-  UsableJSObject.categ.simple.name.splice(UsableJSObject.categ.simple.name.length, 1);
-  UsableJSObject.categ.simple.description.splice(UsableJSObject.categ.simple.description.length, 1);
+  UsableJSObject.categ.simple.name.splice(position, 1);
+  UsableJSObject.categ.simple.description.splice(position, 1);
 }
 else
 {
-  delete UsableJSObject.categ.daily.name[UsableJSObject.categ.simple.name.length]
-  delete UsableJSObject.categ.daily.description[UsableJSObject.categ.simple.description.length]
-  UsableJSObject.categ.daily.name.splice(UsableJSObject.categ.daily.name.length, 1);
-  UsableJSObject.categ.daily.description.splice(UsableJSObject.categ.daily.description.length, 1);
+  delete UsableJSObject.categ.daily.name[position]
+  delete UsableJSObject.categ.daily.description[position]
+  UsableJSObject.categ.daily.name.splice(position, 1);
+  UsableJSObject.categ.daily.description.splice(position, 1);
 }
-document.getElementById("fakeform").submit(); 
+document.getElementById("fakeform").submit();
 }
 
 function createInterface(){
