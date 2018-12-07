@@ -1,15 +1,24 @@
-div {
-    background-color: lightblue;
-    width: 300px;
-    border: 10px solid blue;
-    padding: 25px;
-    margin: 2%;
-    display: inline-block;
-  }
 
  #icon {
 
    width: 10%;
    height: 10%;
-   
+   max-width:100%;
+	 max-height:100%;
+
  }
+
+td {
+  background-color: lightblue;
+  border: 2px solid black;
+  padding: 50px;
+  background-image: radial-gradient(circle, #5599ff, #21a4f9, #00adee, #15b3e0, #43b8d1);
+
+}
+
+table{
+
+  margin:auto;
+  border-spacing: 50px;
+
+}
