@@ -21,6 +21,8 @@ Enfin, l'écran Gestion des tâches permet d'accéder à une interface de planif
 La section Ouvrir le planning donne accès à un calendrier sur lequel on aurait dû pouvoir inscrire des évènements.
 Dans la section Choses à faire, on peut modifier deux "Check-List", y ajouter des entrées, et en supprimer.
 
+La documentation complète est disponible sur le dépot
+
 ## 3. Auteurs
 
 L'équipe La mer noire
