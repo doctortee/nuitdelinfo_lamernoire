@@ -2,6 +2,19 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>NDI - CheckList</title>
+  <script>
+    var UsableJSObject = new Object();
+    UsableJSObject.categ = new Object();
+    UsableJSObject.categ.daily=new Object();
+    UsableJSObject.categ.simple=new Object();
+    UsableJSObject.categ.ended=new Object();
+    UsableJSObject.categ.daily.name = []
+    UsableJSObject.categ.daily.description = []
+    UsableJSObject.categ.simple.name = []
+    UsableJSObject.categ.simple.description = []
+    UsableJSObject.categ.ended.name = []
+    UsableJSObject.categ.ended.description = []
+</script>
   <script src="checklist_script.js">
   </script>
 </head>
