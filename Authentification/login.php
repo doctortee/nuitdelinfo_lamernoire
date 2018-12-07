@@ -19,7 +19,8 @@
 		</header>
 		
 		</br> 
-		</br>		
+		</br>	
+		<h2>Connectez-vous</h2>	
 <form name="authent" method="POST"  onsubmit="return verif();" action=Authentication.php>		
 		
 		<table class="tableau">					
@@ -36,7 +37,7 @@
 							
             
 		</table>
-		
+
 		<p><input type="submit" value="Valider" style="width:125px;height:25px"></p>
 	
 	</div>
