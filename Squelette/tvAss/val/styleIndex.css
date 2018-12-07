@@ -1,25 +1,21 @@
 body {
   margin: 0 auto;
-  font-family: "Verdana";
+  background: linear-gradient(#209DFE, #60BAFF);
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 ul.ulMenu {
   list-style-type: none;
-  margin: auto;
+  margin: 0;
   padding: 0;
   overflow: hidden;
   background-color: #333;
 }
 
-a,a:hover {
-  color : #FFF;
-  text-decoration: none;
-}
-
-ul.ulMenu a:focus {background-color: #4CAF50;}
-
 ul.ulMenu li {
-  float:left;
+  float: left;
+
 }
 
 ul.ulMenu li{
@@ -28,14 +24,11 @@ ul.ulMenu li{
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
-  -webkit-transition: all 0.3s ease-in-out;
-  -moz-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
 }
 
-ul.ulMenu li:hover {background-color: #111;}
+ul.ulMenu li:hover:not(.active) {background-color: #111;}
 
-ul.ulMenu a:focus li {background-color: #4CAF50;}
+ul.ulMenu li.active {background-color: #4CAF50;}
 
 ul.ulMenu li.right {float: right;}
 
@@ -45,7 +38,7 @@ ul.ulMenu li.right {float: right;}
 }
 
 section {
-  margin:auto;
+  margin: auto;
   width: 70%;
   border: 1px solid black;
 }
