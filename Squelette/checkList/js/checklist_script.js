@@ -100,6 +100,7 @@ else
   UsableJSObject.categ.daily.name.splice(position, 1);
   UsableJSObject.categ.daily.description.splice(position, 1);
 }
+saveXMLfromChecklist()
 document.getElementById("fakeform").submit();
 }
 
