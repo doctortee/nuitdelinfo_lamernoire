@@ -1,0 +1,54 @@
+header {
+	overflow: hidden;
+  	background-color: black;
+  	color: white;
+}
+
+h1 {
+	
+	font-family: Times, serif;
+	font-size: 100%;
+	text-transform: uppercase;
+	letter-spacing: 0em;
+	word-spacing: 0.3em;
+	color: white;
+	text-align: left;
+	
+}
+
+body {
+	font:  Verdana, Arial, Helvetica, sans-serif ;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	color: #000;
+	text-align: center;
+	padding: 0;
+	margin: 0;
+}
+
+table {
+	margin-left:auto; 
+    margin-right:auto;
+}
+
+input {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    display:inline-block;
+    vertical-align:middle;
+    margin-left:20px
+}
+
+label {
+    display:inline-block; 
+    float: left;
+    padding-top: 5px;
+    text-align: right;
+    width: 140px;
+}
+
+.valider {
+	margin:auto;
+  display:block;
+}
