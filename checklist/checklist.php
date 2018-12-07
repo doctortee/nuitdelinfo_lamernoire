@@ -1,3 +1,14 @@
+<?php
+//print_r($_POST[test]);
+if ($_POST[test]) {
+  $fichier = fopen("./checklist.xml", "w");
+  if ($fichier)
+  {
+    $buffer = fwrite($fichier, $_POST[test]);
+    fclose($fichier);
+  }
+}
+?>
 <html>
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -19,7 +30,7 @@
   </script>
 </head>
 <body>
-  <form action="http://sigmachine.ca/checklist/saveCheckList" method="post">
+  <form action="http://sigmachine.ca/checklist/checkList.php" method="post">
   <textarea cols="60" rows="10" wrap="soft" name="test" id="xmlcontent" hidden>
     <?php
     $fichier = fopen("./checklist.xml", "r");
@@ -42,15 +53,7 @@
 
 <script>
   loadXMLAndInitChecklist()
-  for (i = 0; i < UsableJSObject.categ.simple.name.length; i++) {
-    alert(UsableJSObject.categ.simple.name[i] + "\t" + UsableJSObject.categ.simple.description[i])
-  }
-  for (i = 0; i < UsableJSObject.categ.daily.name.length; i++) {
-    alert(UsableJSObject.categ.daily.name[i] + "\t" + UsableJSObject.categ.daily.description[i])
-  }
-  for (i = 0; i < UsableJSObject.categ.ended.name.length; i++) {
-    alert(UsableJSObject.categ.ended.name[i] + "\t" + UsableJSObject.categ.ended.description[i])
-  }
+  createInterface()
   saveXMLfromChecklist()
 </script>
 </html>
