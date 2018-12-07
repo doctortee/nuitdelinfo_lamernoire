@@ -13,7 +13,7 @@ if ($_POST[test]) {
 <html lang="fr">
   <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="../styleIndex.css">
+    <link rel="stylesheet" href="css/styleIndex.css">
     <!--Link a retirer lors de l'insertion des pages entre-elles-->
     <link rel="stylesheet" href="css/styleCheckList.css">
     <link href="calendrier/vanillaCalendar.css" rel="stylesheet">
