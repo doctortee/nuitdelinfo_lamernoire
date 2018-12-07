@@ -3,6 +3,7 @@
     <TITLE>Météo en temps Réel</TITLE>
     <meta charset="utf-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <link rel="stylesheet" href="style/style.css">
     <script type="text/javascript">
     window.onload=function() {
       horloge('div_horloge');
@@ -23,9 +24,10 @@
   </HEAD>
   <BODY>
     <!-- Section d'implémentation du Saint API, Amen -->
-    <TABLE>
+    <TABLE id="horloge">
       <tr>
         <td>
+          <img src="img/clock.png">
           <div id="div_horloge"></div>
         </td>
         <td>
@@ -38,6 +40,5 @@
         </td>
       </tr>
     </table>
-    <div id="cont_e5ad430a0ed3bba5db0501d943f82577"><script type="text/javascript" async src="https://www.tameteo.com/wid_loader/e5ad430a0ed3bba5db0501d943f82577"></script></div>
-  </BODY>
+    <div id="meteoCadre"><div id="cont_730d20c26c5212ff0a838adfa357e5cf"><script type="text/javascript" async src="https://www.tameteo.com/wid_loader/730d20c26c5212ff0a838adfa357e5cf"></script></div></div>
 </HTML>

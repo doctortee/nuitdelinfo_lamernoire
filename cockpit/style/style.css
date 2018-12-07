@@ -1,0 +1,41 @@
+body
+{
+  background: linear-gradient(#209DFE, #60BAFF);
+  font-family: sans-serif;
+}
+
+#horloge
+{
+  width: 10%;
+  margin: 1%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 0;
+  border-style: solid;
+  border-width: thin;
+  border-color: black;
+  background: white;
+  color: #868686;
+  text-align: center;
+}
+
+#horloge tr td img
+{
+  width: 50%;
+  margin: 1%;
+}
+
+#div_horloge
+{
+  font-size: 135%;
+  font-weight: bold;
+  margin: 1%;
+}
+
+#meteoCadre
+{
+  margin: 1%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
