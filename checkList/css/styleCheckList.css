@@ -52,5 +52,6 @@ button{
 
 #fieldsetTodoList
 {
+  margin: auto;
   width: fit-content;
 }
