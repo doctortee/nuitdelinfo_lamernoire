@@ -139,13 +139,13 @@ if ($_POST[test]) {
   </body>
   <script src="calendrier/vanillaCalendar.js"></script>
 
-
-    <script src="js/checklist_script.js">
-    </script>
-  <script>
-    loadXMLAndInitChecklist()
-    createInterface()
-    saveXMLfromChecklist()
-  </script>
   <script type="text/javascript" src="js/script.js"></script>
+
+      <script src="js/checklist_script.js">
+      </script>
+    <script>
+      loadXMLAndInitChecklist()
+      createInterface()
+      saveXMLfromChecklist()
+    </script>
 </html>
