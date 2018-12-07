@@ -29,8 +29,6 @@ if ($_POST[test]) {
       UsableJSObject.categ.simple.name = []
       UsableJSObject.categ.simple.description = []
   </script>
-    <script src="js/checklist_script.js">
-    </script>
   </head>
   <body>
     <header>
@@ -139,11 +137,15 @@ if ($_POST[test]) {
       Date Sélectionnée: <span data-calendar-label="picked"></span>
     </section>
   </body>
+  <script src="calendrier/vanillaCalendar.js"></script>
+
+
+    <script src="js/checklist_script.js">
+    </script>
   <script>
     loadXMLAndInitChecklist()
     createInterface()
     saveXMLfromChecklist()
   </script>
-  <script src="calendrier/vanillaCalendar.js"></script>
   <script type="text/javascript" src="js/script.js"></script>
 </html>

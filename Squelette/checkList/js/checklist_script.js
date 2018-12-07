@@ -58,14 +58,16 @@ function saveXMLfromChecklist() {
   }
   txt=txt+"</checklist>\n</xml>"
   textPointer.value = txt
-  alert(txt)
+  //alert(txt)
 }
 
 function createInterface(){
   for (i = 0; i < UsableJSObject.categ.simple.name.length; i++) {
-    alert(UsableJSObject.categ.simple.name[i] + "\t" + UsableJSObject.categ.simple.description[i])
+    addItemToList(jsListOfTodoListSimple, UsableJSObject.categ.simple.name[i], UsableJSObject.categ.simple.description[i])
+    //alert(UsableJSObject.categ.simple.name[i] + "\t" + UsableJSObject.categ.simple.description[i])
   }
   for (i = 0; i < UsableJSObject.categ.daily.name.length; i++) {
-    alert(UsableJSObject.categ.daily.name[i] + "\t" + UsableJSObject.categ.daily.description[i])
+    addItemToList(jsListOfTodoListDaily, UsableJSObject.categ.daily.name[i], UsableJSObject.categ.daily.description[i])
+    //alert(UsableJSObject.categ.daily.name[i] + "\t" + UsableJSObject.categ.daily.description[i])
   }
 }
