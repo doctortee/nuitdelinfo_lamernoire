@@ -1,7 +1,6 @@
 function loadXMLAndInitChecklist() {
   var indexA = 0
   var indexB = 0
-  var indexC = 0
   var text = document.getElementById("xmlcontent").value;
   var parser = new DOMParser();
   var xmlDoc = parser.parseFromString(text, "text/xml")
@@ -39,18 +38,7 @@ function loadXMLAndInitChecklist() {
                 break;
             }
             break;
-          case "ended":
-            switch (z[k].name) {
-              case "name":
-                UsableJSObject.categ.ended.name[indexC] = z[k].value;
-                break;
-              case "value":
-                UsableJSObject.categ.ended.description[indexC] = z[k].value;
-                indexC += 1
-                break;
-              default:
-                break;
-            }
+          default:
             break;
         }
       }
@@ -68,23 +56,61 @@ function saveXMLfromChecklist() {
   for (i = 0; i < UsableJSObject.categ.simple.name.length; i++) {
     txt=txt+"<task name=\""+UsableJSObject.categ.simple.name[i]+"\" value=\""+UsableJSObject.categ.simple.description[i]+"\" />\n"
   }
-  txt = txt+"</checklist>\n<checklist name=\"ended\">\n"
-  for (i = 0; i < UsableJSObject.categ.ended.name.length; i++) {
-    txt=txt+"<task name=\""+UsableJSObject.categ.ended.name[i]+"\" value=\""+UsableJSObject.categ.ended.description[i]+"\" />\n"
-  }
   txt=txt+"</checklist>\n</xml>"
   textPointer.value = txt
-  alert(txt)
+  //alert(txt)
+}
+
+function insertToChecklist()
+{
+
+  var listSelected = document.getElementById("selectList");
+  var listSel = eval(listSelected.children[listSelected.selectedIndex].value);
+  if (listSel == jsListOfTodoListDaily) {
+    listSel = "daily"
+  }
+  else {
+    listSel = "simple"
+  }
+  var name = document.getElementById("nameInput").value;
+  var desc = document.getElementById("descriptionArea").value;
+  if (listSel == "simple") {
+    UsableJSObject.categ.simple.name[UsableJSObject.categ.simple.name.length] = name
+    UsableJSObject.categ.simple.description[UsableJSObject.categ.simple.description.length] = desc
+  }
+  else
+  {
+    UsableJSObject.categ.daily.name[UsableJSObject.categ.simple.name.length] = name
+    UsableJSObject.categ.daily.description[UsableJSObject.categ.simple.description.length] = desc
+  }
+}
+
+function removeFromChecklist(listNom, position){
+if (listNom == "simple") {
+  delete UsableJSObject.categ.simple.name[position]
+  delete UsableJSObject.categ.simple.description[position]
+
+  UsableJSObject.categ.simple.name.splice(position, 1);
+  UsableJSObject.categ.simple.description.splice(position, 1);
+}
+else
+{
+  delete UsableJSObject.categ.daily.name[position]
+  delete UsableJSObject.categ.daily.description[position]
+  UsableJSObject.categ.daily.name.splice(position, 1);
+  UsableJSObject.categ.daily.description.splice(position, 1);
+}
+saveXMLfromChecklist()
+//document.getElementById("fakeform").submit();
 }
 
 function createInterface(){
   for (i = 0; i < UsableJSObject.categ.simple.name.length; i++) {
-    alert(UsableJSObject.categ.simple.name[i] + "\t" + UsableJSObject.categ.simple.description[i])
+    addItemToList(jsListOfTodoListSimple, UsableJSObject.categ.simple.name[i], UsableJSObject.categ.simple.description[i])
+    //alert(UsableJSObject.categ.simple.name[i] + "\t" + UsableJSObject.categ.simple.description[i])
   }
   for (i = 0; i < UsableJSObject.categ.daily.name.length; i++) {
-    alert(UsableJSObject.categ.daily.name[i] + "\t" + UsableJSObject.categ.daily.description[i])
-  }
-  for (i = 0; i < UsableJSObject.categ.ended.name.length; i++) {
-    alert(UsableJSObject.categ.ended.name[i] + "\t" + UsableJSObject.categ.ended.description[i])
+    addItemToList(jsListOfTodoListDaily, UsableJSObject.categ.daily.name[i], UsableJSObject.categ.daily.description[i])
+    //alert(UsableJSObject.categ.daily.name[i] + "\t" + UsableJSObject.categ.daily.description[i])
   }
 }

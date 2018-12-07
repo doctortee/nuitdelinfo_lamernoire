@@ -1,0 +1,56 @@
+/*
+Style Checklist
+*/
+
+.tdCheckList
+{
+  width: 50%;
+  border-right: 2px solid black;
+  border-collapse: collapse;
+}
+
+.tdCheckList.right
+{
+  border-right: 0px solid black;
+}
+
+a {
+  color: inherit; /* blue colors for links too */
+  text-decoration: inherit; /* no underline */
+}
+
+h3
+{
+  margin-left: 15px;
+}
+
+button{
+  margin: 10px 10px;
+}
+
+#tableCheckList
+{
+  border-spacing: 0;
+  width: 100%;
+  margin: 10px 0;
+}
+
+#accueilCheckList
+{
+  text-align: center;
+}
+
+.hideCheckList
+{
+  display: none;
+}
+
+.listOfTodoList
+{
+  list-style-type: none;
+}
+
+#fieldsetTodoList
+{
+  width: fit-content;
+}
