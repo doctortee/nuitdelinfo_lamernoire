@@ -5,17 +5,29 @@
    height: 45%;
  }
 
-td {
+#bloc1 {
   background-color: lightblue;
   border: 2px solid black;
   padding: 50px;
-  
-
 }
 
-table{
+#d1{
+  background-color: lightblue;
+  border: 2px solid black;
+  padding: 50px;
+}
+
+
+#table1{
 
   margin:auto;
   border-spacing: 50px;
 
+}
+#chartContainer2{
+
+}
+
+.canvasjs-chart-canvas{
+  height: 150px;
 }
