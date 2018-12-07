@@ -16,7 +16,7 @@ if ($_POST[test]) {
     <link rel="stylesheet" href="../styleIndex.css">
     <!--Link a retirer lors de l'insertion des pages entre-elles-->
     <link rel="stylesheet" href="css/styleCheckList.css">
-    <link href="calendrier/vanillacalendar.css" rel="stylesheet">
+    <link href="calendrier/vanillaCalendar.css" rel="stylesheet">
     <title>Gestion des tâches</title>
     <script>
       var UsableJSObject = new Object();
@@ -144,6 +144,6 @@ if ($_POST[test]) {
     createInterface()
     saveXMLfromChecklist()
   </script>
-  <script src="calendrier/vanillacalendar.js"></script>
+  <script src="calendrier/vanillaCalendar.js"></script>
   <script type="text/javascript" src="js/script.js"></script>
 </html>
