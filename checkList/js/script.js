@@ -27,17 +27,28 @@ function addItemToList(list,name,description)
     list = eval(listSelected.children[listSelected.selectedIndex].value);
     let jsNameInput = document.getElementById("nameInput");
     name = nameInput.value;
+    name = name.replace(/ /g, "_");//name.replace(" ", "_")
     let jsDescriptionInput = document.getElementById("descriptionArea");
     description = descriptionArea.value;
+  }
+  var listNameLol = ""
+  if (list == jsListOfTodoListDaily){
+    listNameLol = "daily"
+  }
+  else
+  {
+    listNameLol = "simple"
   }
 
   let listElement = document.createElement("LI");
   let inputCheckbox = document.createElement("INPUT");
   inputCheckbox.type = "checkbox";
+  inputCheckbox.setAttribute("onclick","delElementToList(\""+listNameLol+"\","+list.children.length+");removeFromChecklist(\""+listNameLol+"\","+list.children.length+")");
   listElement.appendChild(inputCheckbox);
 
   let labelElement = document.createElement("LABEL");
   let labelTextNode = document.createTextNode(name);
+  name = name.replace(/ /g, "_");//name.replace(" ", "_")
   labelElement.appendChild(labelTextNode);
   let aElement = document.createElement("A");
   aElement.href = "#"+name;
@@ -59,6 +70,12 @@ function addItemToList(list,name,description)
 
 function delElementToList(list,position)
 {
+  if (list == "daily"){
+    list = jsListOfTodoListDaily
+  }
+  else if (list == "simple"){
+    list = jsListOfTodoListSimple
+  }
   list.children[position].remove();
 }
 

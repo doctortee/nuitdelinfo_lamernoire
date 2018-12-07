@@ -34,41 +34,143 @@ __         ______         __       __  ________  _______         __    __   ____
         </ul>
     </header>
     <section>
-      <table>
-        <tr>
-          <td>
-            <img src="gallery/heart.png" id="icon">
-            Heartbeat
-        </td>
-        <td>
-            <img src="gallery/boots.png" id="icon">
-            Step
-        </td>
-        <td>
-            <img src="gallery/burger.png" id="icon">
-            Food
-        </td>
-       </tr>
-       <tr>
-         <td>
-          <img src="gallery/flash.png" id="icon">
-          Energy
-      </td>
-        <td>
-            <img src="gallery/thermometer.png" id="icon">
-            Temp
-        </td>
-        <td>
-            <img src="gallery/water.png" id="icon">
-            Water
-        </td>
-        </tr>
-      </table>
 
+      <div id="d1">
+        <table id="t1">
+          <tr>
+            <td>
+              <img src="gallery/heart.png" id="icon">
+            </td>
+            <td>
+              80 BPM
+            </td>
+            <td id="chartContainer2" style="height: 100%; width:90%;">
+            </td>
+          </tr>
+        </table>
+      </div>
+
+      <div id="d1">
+        <table id="t1">
+          <tr>
+            <td>
+              <img src="gallery/boots.png" id="icon">
+            </td>
+            <td>
+              1600 Feet
+            </td>
+          </tr>
+        </table>
+      </div>
+
+      <div id="d1">
+        <table id="t1">
+          <tr>
+            <td>
+              <img src="gallery/burger.png" id="icon">
+            </td>
+            <td>
+              Food
+            </td>
+            <td id="chartContainer1" style="height: 100%; width:90%;">
+            </td>
+          </tr>
+        </table>
+      </div>
+
+      <div id="d1">
+        <table id="t1">
+          <tr>
+            <td>
+              <img src="gallery/flash.png" id="icon">
+            </td>
+            <td>
+              Last sleep: 210 min
+            </td>
+          </tr>
+        </table>
+      </div>
+
+      <div id="d1">
+        <table id="t1">
+          <tr>
+            <td>
+              <img src="gallery/thermometer.png" id="icon">
+            </td>
+            <td>
+              37.5 °C
+            </td>
+          </tr>
+        </table>
+      </div>
+
+      <div id="d1">
+        <table id="t1">
+          <tr>
+            <td>
+              <img src="gallery/water.png" id="icon">
+            </td>
+            <td>
+              Last drink:
+            </td>
+            <td>
+              50 min
+            </td>
+          </tr>
+        </table>
+      </div>
 
     </section>
     <footer>
       <p>Footer</p>
     </footer>
+
+    <script>
+    window.onload = function () {
+
+    var chart1 = {
+    	animationEnabled: true,
+      backgroundColor:"lightblue",
+
+    	data: [{
+    		type: "doughnut",
+    		innerRadius: "40%",
+    		indexLabel: "{label}: #percent%",
+    		dataPoints: [
+    			{ label: "Calories dépensées", y: 692917 },
+    			{ label: "", y: 900000 }
+    		]
+    	}]
+    };
+
+      var chart2 = {
+      	animationEnabled: true,
+        backgroundColor:"lightblue",
+      	data: [
+      	{
+      		type: "splineArea",
+          color: "red",
+      		dataPoints: [
+      			{ y: 100 },
+      			{ y: 106 },
+      			{ y: 114 },
+      			{ y: 112 },
+      			{ y: 90 },
+      			{ y: 100 },
+      			{ y: 105 },
+      			{ y: 100 },
+      			{ y: 80 }
+      		]
+      	}
+      	]
+      };
+      $("#chartContainer1").CanvasJSChart(chart1);
+      $("#chartContainer2").CanvasJSChart(chart2);
+
+      }
+      </script>
+
+<script src="https://canvasjs.com/assets/script/jquery-1.11.1.min.js"></script>
+<script src="https://canvasjs.com/assets/script/jquery.canvasjs.min.js"></script>
   </body>
 </html>
