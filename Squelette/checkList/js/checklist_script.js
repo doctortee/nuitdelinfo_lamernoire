@@ -87,13 +87,13 @@ function insertToChecklist()
 
 function removeFromChecklist(listNom, position){
 if (listNom == "simple") {
-  UsableJSObject.categ.simple.name[UsableJSObject.categ.simple.name.length] = null
-  UsableJSObject.categ.simple.description[UsableJSObject.categ.simple.description.length] = null
+  delete UsableJSObject.categ.simple.name[UsableJSObject.categ.simple.name.length]
+  delete UsableJSObject.categ.simple.description[UsableJSObject.categ.simple.description.length]
 }
 else
 {
-  UsableJSObject.categ.daily.name[UsableJSObject.categ.simple.name.length] = null
-  UsableJSObject.categ.daily.description[UsableJSObject.categ.simple.description.length] = null
+  delete UsableJSObject.categ.daily.name[UsableJSObject.categ.simple.name.length]
+  delete UsableJSObject.categ.daily.description[UsableJSObject.categ.simple.description.length]
 }
 }
 
