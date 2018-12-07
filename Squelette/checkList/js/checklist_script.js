@@ -67,7 +67,7 @@ function insertToChecklist()
   var jsListOfTodoListDaily = document.getElementById("listOfTodoListDaily"),
       jsListOfTodoListSimple = document.getElementById("listOfTodoListSimple");
   var listSelected = document.getElementById("selectList");
-  listSel = eval(listSelected.children[listSelected.selectedIndex].value);
+  var listSel = eval(listSelected.children[listSelected.selectedIndex].value);
   if (listSet == jsListOfTodoListDaily) {
     listSel = "daily"
   }
