@@ -6,7 +6,7 @@ body {
 #header {
   position: fixed;
   background: #333;
-  height: 51px;
+  height: 49px;
   width: 100%;
   z-index: 502;
   top: 0;
@@ -24,8 +24,9 @@ body {
   height:33px;
   display: inline-block;
   text-align: center;
-  margin: 0;
-  padding:16px 1% 0 0px;
+  margin: auto;
+  width: 15%;
+  padding-top:16px;
   -webkit-transition: all 0.3s ease-in-out;
   -moz-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
@@ -59,12 +60,14 @@ a,a:hover {
 section {
   margin:auto;
   width: 70%;
-  padding-top: 50px;
   border: 1px solid black;
 }
 
 @media screen and (max-width: 600px) {
   section {width: 100%}
+  #menu ul li {display: block; height: auto;padding:1% 0;margin:auto;width:auto;}
+  #menu ul li a {height: fit-content;margin:auto;}
+  #header {height:auto;}
 }
 
 footer {
