@@ -23,8 +23,6 @@ if ($_POST[test]) {
     UsableJSObject.categ.daily.description = []
     UsableJSObject.categ.simple.name = []
     UsableJSObject.categ.simple.description = []
-    UsableJSObject.categ.ended.name = []
-    UsableJSObject.categ.ended.description = []
 </script>
   <script src="checklist_script.js">
   </script>
@@ -47,7 +45,7 @@ if ($_POST[test]) {
   </textarea>
   <br>
   <input type="submit" value="Valider" onclick="saveXMLfromChecklist()"/>
-  <input type="reset" value="Reload" onclick="loadXMLAndInitChecklist()"/>
+  <input type="submit" value="Reload" onclick="loadXMLAndInitChecklist()"/>
 </form>
 </body>
 

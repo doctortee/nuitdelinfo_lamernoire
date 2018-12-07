@@ -7,8 +7,4 @@
     <task name="Tache simple 1" value="Description 1" />
     <task name="Tache simple 2" value="Description 2" />
   </checklist>
-  <checklist name="ended">
-    <task name="Tache finie 1" value="Description 1" />
-    <task name="Tache finie 2" value="Description 2" />
-  </checklist>
 </xml>
