@@ -2,6 +2,21 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>NDI - CheckList</title>
+  <script>
+    var UsableJSObject = new Object();
+    UsableJSObject.categ = new Object();
+    UsableJSObject.categ.daily=new Object();
+    UsableJSObject.categ.simple=new Object();
+    UsableJSObject.categ.ended=new Object();
+    UsableJSObject.categ.daily.name = []
+    UsableJSObject.categ.daily.description = []
+    UsableJSObject.categ.simple.name = []
+    UsableJSObject.categ.simple.description = []
+    UsableJSObject.categ.ended.name = []
+    UsableJSObject.categ.ended.description = []
+</script>
+  <script src="checklist_script.js">
+  </script>
 </head>
 <body>
   <form action="http://sigmachine.ca/checklist/saveCheckList" method="post">
@@ -20,25 +35,8 @@
     ?>
   </textarea>
   <br>
-  <input type="submit" value="Valider" />
-  <input type="reset" value="Reload" />
+  <input type="submit" value="Valider" onclick="saveXMLfromChecklist()"/>
+  <input type="reset" value="Reload" onclick="loadXMLAndInitChecklist()"/>
 </form>
 </body>
-<script>
-var text = document.getElementById("xmlcontent").value;
-//alert(text)
-var parser = new DOMParser();
-var xmlDoc = parser.parseFromString(text, "text/xml")
-var txt=""
-x = xmlDoc.documentElement.childNodes;
-var currentNode = null
-for (i = 0; i < x.length ;i++) {
-  currentNode = x[i]
-    //txt += currentNode.attributes// + ": " + x[i].childNodes[0].childNodes[0].childNodes[0].nodeValue + "<br>";
-    for (e in currentNode.attributes) {
-      alert(e)
-    }
-}
-alert(txt)
-</script>
 </html>
