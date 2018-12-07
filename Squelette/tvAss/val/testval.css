@@ -1,18 +1,15 @@
 
  #icon {
 
-   width: 10%;
-   height: 10%;
-   max-width:100%;
-	 max-height:100%;
-
+   width: auto;
+   height: 45%;
  }
 
 td {
   background-color: lightblue;
   border: 2px solid black;
   padding: 50px;
-  background-image: radial-gradient(circle, #5599ff, #21a4f9, #00adee, #15b3e0, #43b8d1);
+  
 
 }
 
