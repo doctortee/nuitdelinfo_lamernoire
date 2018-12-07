@@ -31,11 +31,19 @@ function addItemToList(list,name,description)
     let jsDescriptionInput = document.getElementById("descriptionArea");
     description = descriptionArea.value;
   }
+var listNameLol = ""
+  if (list == jsListOfTodoListDaily){
+    listNameLol = "daily"
+  }
+  else
+  {
+    listNameLol = "simple"
+  }
 
   let listElement = document.createElement("LI");
   let inputCheckbox = document.createElement("INPUT");
   inputCheckbox.type = "checkbox";
-  inputCheckbox.setAttribute("onclick","delElementToList("+list+","+list.children.length+")");
+  inputCheckbox.setAttribute("onclick","delElementToList("+listNameLol+","+list.children.length+")");
   listElement.appendChild(inputCheckbox);
 
   let labelElement = document.createElement("LABEL");
@@ -62,6 +70,12 @@ function addItemToList(list,name,description)
 
 function delElementToList(list,position)
 {
+  if (list == "daily"){
+    list = jsListOfTodoListDaily
+  }
+  else if (list == "simple"){
+    list = jsListOfTodoListSimple
+  }
   list.children[position].remove();
 }
 
