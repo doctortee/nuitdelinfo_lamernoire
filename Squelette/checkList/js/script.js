@@ -41,7 +41,7 @@ function addItemToList(list,name,description)
   labelElement.appendChild(labelTextNode);
   let aElement = document.createElement("A");
   aElement.href = "#"+name;
-  aElement.setAttribute("onclick","extend("+name+")");
+  aElement.setAttribute("onclick","extend(\""+name+"\")");
   let aTextElement = document.createTextNode(" +");
   aElement.appendChild(aTextElement);
   labelElement.appendChild(aElement);
