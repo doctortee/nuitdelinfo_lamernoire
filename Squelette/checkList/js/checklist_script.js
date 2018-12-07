@@ -58,7 +58,7 @@ function saveXMLfromChecklist() {
   }
   txt=txt+"</checklist>\n</xml>"
   textPointer.value = txt
-  alert(txt)
+  //alert(txt)
 }
 
 function insertToChecklist()
