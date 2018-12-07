@@ -98,7 +98,7 @@ else
   delete UsableJSObject.categ.daily.name[UsableJSObject.categ.simple.name.length]
   delete UsableJSObject.categ.daily.description[UsableJSObject.categ.simple.description.length]
   UsableJSObject.categ.daily.name.splice(UsableJSObject.categ.daily.name.length, 1);
-  UsableJSObject.categ.simpdailyle.description.splice(UsableJSObject.categ.daily.description.length, 1); 
+  UsableJSObject.categ.daily.description.splice(UsableJSObject.categ.daily.description.length, 1); 
 }
 }
 
