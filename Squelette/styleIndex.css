@@ -2,12 +2,32 @@ body {
   margin: 0 auto;
 }
 
-ul.ulMenu {
-  list-style-type: none;
-  margin: auto;
-  padding: 0;
-  overflow: hidden;
-  background-color: #333;
+#header {
+  position: fixed;
+  background: #333;
+  height: 51px;
+  width: 100%;
+  z-index: 502;
+  top: 0;
+  left: 0;
+}
+
+#menu {
+  display: inline;
+  text-align:center;
+  margin:0 auto;
+  position: relative;
+}
+#menu ul {margin:0; padding:0; list-style:none;}
+#menu ul li {
+  height:33px;
+  display: inline-block;
+  text-align: center;
+  margin: 0;
+  padding:16px 1% 0 0px;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 a,a:hover {
@@ -15,37 +35,30 @@ a,a:hover {
   text-decoration: none;
 }
 
-ul.ulMenu a:focus {background-color: #4CAF50;}
+#menu ul li:hover{
+	background:#111;
 
-ul.ulMenu li {
-  float:left;
 }
 
-ul.ulMenu li{
+#menu ul a:focus li{
+	background: #4CAF50;
+}
+
+
+
+#menu ul li a {
+  color: #FFFFFF;
+ text-decoration: none;
+ text-transform: uppercase;
+  height: 36px;
   display: block;
-  color: white;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  -webkit-transition: all 0.3s ease-in-out;
-  -moz-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
-}
-
-ul.ulMenu li:hover {background-color: #111;}
-
-ul.ulMenu a:focus li {background-color: #4CAF50;}
-
-ul.ulMenu li.right {float: right;}
-
-@media screen and (max-width: 600px) {
-  ul.ulMenu li.right,
-  ul.ulMenu li {float: none;}
+  cursor: pointer;
 }
 
 section {
   margin: auto;
   width: 70%;
+  padding-top: 50px;
   border: 1px solid black;
 }
 

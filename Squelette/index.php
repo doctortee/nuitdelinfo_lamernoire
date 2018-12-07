@@ -8,13 +8,15 @@
 
   </head>
   <body>
-    <header>
-        <ul class="ulMenu">
-          <a href="#"><li>Gestion des tâches</li></a>
-          <a href="#"><li>Cockpit</li></a>
-          <a href="#"><li>Télé-assistance vie</li></a>
-        </ul>
-    </header>
+    <div id="header">
+    	<nav id="menu" class="navbar">
+    		<ul>
+    			<a href="#" class=""><li>Gestion des tâches</li></a>
+    			<a href="#" class=""><li>Cockpit</li></a>
+    			<a href="#" class=""><li>Télé-assistance vie</li></a>
+    		</ul>
+    	</nav>
+    </div>
     <section>
 
     </section>
