@@ -43,7 +43,9 @@ a,a:hover {
 }
 
 #menu ul a:focus li{
-	background: #4CAF50;
+	background: #FFFFFF;
+  color: black;
+  transition: 1s;
 }
 
 

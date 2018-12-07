@@ -5,26 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styleIndex.css">
     <title>Test</title>
-  </head>
-  <body>
-  <script>
+    <script>
 
-  function menuAffiche1() {
-    document.getElementById("taches").className = "";
-    document.getElementById("meteoCockpit").className = "hidden";
-    document.getElementById("TVvie").className = "hidden";
-  }
-  function menuAffiche2() {
-    document.getElementById("taches").className = "hidden";
-    document.getElementById("meteoCockpit").className = "";
-    document.getElementById("TVvie").className = "hidden";
-  }
-  function menuAffiche3() {
-    document.getElementById("taches").className = "hidden";
-    document.getElementById("meteoCockpit").className = "hidden";
-    document.getElementById("TVvie").className = "";
-  }
-  </script>
+    window.onload = function() {
+      document.getElementById("header").className = "hidden";
+    }
+    function menuAffiche1() {
+      document.getElementById("taches").className = "";
+      document.getElementById("meteoCockpit").className = "hidden";
+      document.getElementById("TVvie").className = "hidden";
+    }
+    function menuAffiche2() {
+      document.getElementById("taches").className = "hidden";
+      document.getElementById("meteoCockpit").className = "";
+      document.getElementById("TVvie").className = "hidden";
+    }
+    function menuAffiche3() {
+      document.getElementById("taches").className = "hidden";
+      document.getElementById("meteoCockpit").className = "hidden";
+      document.getElementById("TVvie").className = "";
+    }
+    </script>
+  </head>
+  <body onload="loading()">
     <div id="header" >
     	<nav id="menu" class="navbar">
     		<ul>
