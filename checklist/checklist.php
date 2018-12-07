@@ -39,4 +39,18 @@
   <input type="reset" value="Reload" onclick="loadXMLAndInitChecklist()"/>
 </form>
 </body>
+
+<script>
+  loadXMLAndInitChecklist()
+  for (i = 0; i < UsableJSObject.categ.simple.name.length; i++) {
+    alert(UsableJSObject.categ.simple.name[i] + "\t" + UsableJSObject.categ.simple.description[i])
+  }
+  for (i = 0; i < UsableJSObject.categ.daily.name.length; i++) {
+    alert(UsableJSObject.categ.daily.name[i] + "\t" + UsableJSObject.categ.daily.description[i])
+  }
+  for (i = 0; i < UsableJSObject.categ.ended.name.length; i++) {
+    alert(UsableJSObject.categ.ended.name[i] + "\t" + UsableJSObject.categ.ended.description[i])
+  }
+  saveXMLfromChecklist()
+</script>
 </html>
