@@ -1,5 +1,6 @@
 body {
   margin: 0 auto;
+  font-family: "Verdana";
 }
 
 ul.ulMenu {
@@ -35,7 +36,7 @@ ul.ulMenu li.right {float: right;}
 }
 
 section {
-  margin: auto;
+  margin:auto;
   width: 70%;
   border: 1px solid black;
 }
