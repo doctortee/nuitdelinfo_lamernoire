@@ -24,10 +24,10 @@ Dans la section Choses à faire, on peut modifier deux "Check-List", y ajouter d
 ## 3. Auteurs
 
 L'équipe La mer noire
-C. DELAHAYE
-R. TONDEUR
-N. TEBOUL
-T. CSIGAI
-V. LEQUEUX
-E. CHAILLAND
-A. DUVIVIER
+C. DELAHAYE -
+R. TONDEUR -
+N. TEBOUL -
+T. CSIGAI -
+V. LEQUEUX -
+E. CHAILLAND -
+A. DUVIVIER -
