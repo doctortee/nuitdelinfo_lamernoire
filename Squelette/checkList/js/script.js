@@ -27,7 +27,7 @@ function addItemToList(list,name,description)
     list = eval(listSelected.children[listSelected.selectedIndex].value);
     let jsNameInput = document.getElementById("nameInput");
     name = nameInput.value;
-    name = name.replace(" ", "_")
+    name = name.replace(/ /g, "_");//name.replace(" ", "_")
     let jsDescriptionInput = document.getElementById("descriptionArea");
     description = descriptionArea.value;
   }
@@ -39,7 +39,7 @@ function addItemToList(list,name,description)
 
   let labelElement = document.createElement("LABEL");
   let labelTextNode = document.createTextNode(name);
-  name = name.replace(" ", "_")
+  name = name.replace(/ /g, "_");//name.replace(" ", "_")
   labelElement.appendChild(labelTextNode);
   let aElement = document.createElement("A");
   aElement.href = "#"+name;
