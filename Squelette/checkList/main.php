@@ -1,5 +1,16 @@
+<?php
+//print_r($_POST[test]);
+if ($_POST[test]) {
+  $fichier = fopen("./checklist.xml", "w");
+  if ($fichier)
+  {
+    $buffer = fwrite($fichier, $_POST[test]);
+    fclose($fichier);
+  }
+}
+?>
 <!DOCTYPE html>
-<html lang="fr"">
+<html lang="fr">
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="../styleIndex.css">
@@ -7,6 +18,19 @@
     <link rel="stylesheet" href="css/styleCheckList.css">
     <link href="calendrier/vanillacalendar.css" rel="stylesheet">
     <title>Gestion des tâches</title>
+    <script>
+      var UsableJSObject = new Object();
+      UsableJSObject.categ = new Object();
+      UsableJSObject.categ.daily=new Object();
+      UsableJSObject.categ.simple=new Object();
+      UsableJSObject.categ.ended=new Object();
+      UsableJSObject.categ.daily.name = []
+      UsableJSObject.categ.daily.description = []
+      UsableJSObject.categ.simple.name = []
+      UsableJSObject.categ.simple.description = []
+  </script>
+    <script src="js/checklist_script.js">
+    </script>
   </head>
   <body>
     <header>
@@ -76,6 +100,27 @@
         <ul id="listOfTodoListSimple" class="listOfTodoList">
 
         </ul>
+        <!-- ATTENTION  Ajout pour sauvegarder -->
+          <form action="http://sigmachine.ca/checklist/main.php" method="post">
+          <textarea cols="60" rows="10" wrap="soft" name="test" id="xmlcontent" hidden>
+            <?php
+            $fichier = fopen("./checklist.xml", "r");
+            if ($fichier) {
+                while (($buffer = fgets($fichier, 4096)) !== false) {
+                    echo $buffer;
+                }
+                if (!feof($fichier)) {
+                    echo "Erreur: fgets() a échoué\n";
+                }
+                fclose($fichier);
+            }
+            ?>
+          </textarea>
+          <br>
+          <input type="submit" value="Valider" onclick="saveXMLfromChecklist()"/>
+          <input type="submit" value="Reload" onclick="loadXMLAndInitChecklist()"/>
+        </form>
+      <!-- ATTENTION  Ajout pour sauvegarder -->
     </section>
     <section id="planning" class="hideCheckList">
       <button type="button" name="button" id="afficheCalendrier">Sélectionner une date</button>
@@ -94,6 +139,11 @@
       Date Sélectionnée: <span data-calendar-label="picked"></span>
     </section>
   </body>
+  <script>
+    loadXMLAndInitChecklist()
+    createInterface()
+    saveXMLfromChecklist()
+  </script>
   <script src="calendrier/vanillacalendar.js"></script>
   <script type="text/javascript" src="js/script.js"></script>
 </html>
