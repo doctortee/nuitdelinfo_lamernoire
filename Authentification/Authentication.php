@@ -12,13 +12,14 @@
 			    list($user, $password) = explode(':', $line);
 			    if(trim($user) == $user_input && trim($password) == $password_input){
 			        echo 'Logged in';
+			        header("Location: /nuitdelinfo_lamernoire/Squelette/index.php");
 			        break;
 			    }
 			    else {
 			    session_start();
                 $_SESSION['message'] = 'Identifiant ou mot de passe invalide';
                 header("Location: login.php");
-                //echo 'invalid username or password';
+                
          }
         
        }

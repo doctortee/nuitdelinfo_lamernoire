@@ -6,7 +6,7 @@ header {
 
 h1 {
 	
-	font-family: Times, serif;
+	
 	font-size: 100%;
 	text-transform: uppercase;
 	letter-spacing: 0em;
@@ -17,14 +17,7 @@ h1 {
 }
 
 body {
-	font:  Verdana, Arial, Helvetica, sans-serif ;
-	font-style: normal;
-	font-weight: normal;
-	font-variant: normal;
-	color: #000;
-	text-align: center;
-	padding: 0;
-	margin: 0;
+	font-family: "Verdana";
 }
 
 table {
@@ -51,4 +44,6 @@ label {
 .valider {
 	margin:auto;
   display:block;
+
 }
+

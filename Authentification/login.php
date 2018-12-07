@@ -25,12 +25,12 @@
 		<table class="tableau">					
 		
 			<tr>				
-				<td><label>Votre identifiant :</label></td>
+				<td><label>Votre identifiant:</label></td>
 				<td vertical-align:text-top> <input type="text" name="user" id="user" style="width:250px;height:20px;text-align:center;font-size:15px;color:black;"> </td>
 				   		
 			</tr>
 			<tr>
-				<td><label>Code secret :</label></td>
+				<td><label>Code secret:</label></td>
 				<td> <input type="password" name="pass" id="password" style="width:250px;height:20px;text-align:center;;font-size:15px;color:black;"></td>
 			</tr>
 			<tr>
@@ -41,13 +41,14 @@
 		</table>
 	
 	</div>
-	<div id="errMsg">
+	<div class="erreur" id="errMsg">
 	<?php  session_start();
 	if (isset($_SESSION['message']))
-{
-    echo $_SESSION['message'];
+	{
+		$Text = $_SESSION['message'];
+   echo "<p style=\"text-align:center;color:red\">".$Text."</p>";
     unset($_SESSION['message']);
-}?></div>
+	}?></div>
 </form>
 
 </div>
