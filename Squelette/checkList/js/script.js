@@ -31,7 +31,7 @@ function addItemToList(list,name,description)
     let jsDescriptionInput = document.getElementById("descriptionArea");
     description = descriptionArea.value;
   }
-var listNameLol = ""
+  var listNameLol = ""
   if (list == jsListOfTodoListDaily){
     listNameLol = "daily"
   }
@@ -43,7 +43,7 @@ var listNameLol = ""
   let listElement = document.createElement("LI");
   let inputCheckbox = document.createElement("INPUT");
   inputCheckbox.type = "checkbox";
-  inputCheckbox.setAttribute("onclick","delElementToList(\""+listNameLol+"\","+list.children.length+")");
+  inputCheckbox.setAttribute("onclick","delElementToList(\""+listNameLol+"\","+list.children.length+");removeFromChecklist(\""+listNameLol+"\","+list.children.length+")");
   listElement.appendChild(inputCheckbox);
 
   let labelElement = document.createElement("LABEL");
