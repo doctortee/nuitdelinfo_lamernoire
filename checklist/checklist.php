@@ -30,7 +30,7 @@ if ($_POST[test]) {
   </script>
 </head>
 <body>
-  <form action="http://sigmachine.ca/checklist/checkList.php" method="post">
+  <form action="http://sigmachine.ca/checklist/checklist.php" method="post">
   <textarea cols="60" rows="10" wrap="soft" name="test" id="xmlcontent" hidden>
     <?php
     $fichier = fopen("./checklist.xml", "r");
