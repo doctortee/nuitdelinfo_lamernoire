@@ -1,7 +1,6 @@
 function loadXMLAndInitChecklist() {
   var indexA = 0
   var indexB = 0
-  var indexC = 0
   var text = document.getElementById("xmlcontent").value;
   var parser = new DOMParser();
   var xmlDoc = parser.parseFromString(text, "text/xml")
@@ -39,18 +38,7 @@ function loadXMLAndInitChecklist() {
                 break;
             }
             break;
-          case "ended":
-            switch (z[k].name) {
-              case "name":
-                UsableJSObject.categ.ended.name[indexC] = z[k].value;
-                break;
-              case "value":
-                UsableJSObject.categ.ended.description[indexC] = z[k].value;
-                indexC += 1
-                break;
-              default:
-                break;
-            }
+          default:
             break;
         }
       }
@@ -68,11 +56,16 @@ function saveXMLfromChecklist() {
   for (i = 0; i < UsableJSObject.categ.simple.name.length; i++) {
     txt=txt+"<task name=\""+UsableJSObject.categ.simple.name[i]+"\" value=\""+UsableJSObject.categ.simple.description[i]+"\" />\n"
   }
-  txt = txt+"</checklist>\n<checklist name=\"ended\">\n"
-  for (i = 0; i < UsableJSObject.categ.ended.name.length; i++) {
-    txt=txt+"<task name=\""+UsableJSObject.categ.ended.name[i]+"\" value=\""+UsableJSObject.categ.ended.description[i]+"\" />\n"
-  }
   txt=txt+"</checklist>\n</xml>"
   textPointer.value = txt
   alert(txt)
+}
+
+function createInterface(){
+  for (i = 0; i < UsableJSObject.categ.simple.name.length; i++) {
+    alert(UsableJSObject.categ.simple.name[i] + "\t" + UsableJSObject.categ.simple.description[i])
+  }
+  for (i = 0; i < UsableJSObject.categ.daily.name.length; i++) {
+    alert(UsableJSObject.categ.daily.name[i] + "\t" + UsableJSObject.categ.daily.description[i])
+  }
 }

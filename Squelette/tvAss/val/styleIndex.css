@@ -1,5 +1,8 @@
 body {
   margin: 0 auto;
+  background: linear-gradient(#209DFE, #60BAFF);
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 ul.ulMenu {

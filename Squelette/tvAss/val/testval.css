@@ -1,15 +1,21 @@
-div {
-    background-color: lightblue;
-    width: 300px;
-    border: 10px solid blue;
-    padding: 25px;
-    margin: 2%;
-    display: inline-block;
-  }
 
  #icon {
 
-   width: 10%;
-   height: 10%;
-   
+   width: auto;
+   height: 45%;
  }
+
+td {
+  background-color: lightblue;
+  border: 2px solid black;
+  padding: 50px;
+  
+
+}
+
+table{
+
+  margin:auto;
+  border-spacing: 50px;
+
+}

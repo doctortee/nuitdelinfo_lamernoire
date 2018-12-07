@@ -1,5 +1,6 @@
 body {
   margin: 0 auto;
+  font-family: "Verdana";
 }
 
 #header {
@@ -56,7 +57,7 @@ a,a:hover {
 }
 
 section {
-  margin: auto;
+  margin:auto;
   width: 70%;
   padding-top: 50px;
   border: 1px solid black;
