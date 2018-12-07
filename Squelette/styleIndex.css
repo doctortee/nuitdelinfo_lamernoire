@@ -4,20 +4,15 @@ body {
 }
 
 #header {
-  position: fixed;
   background: #333;
   height: 49px;
   width: 100%;
-  z-index: 502;
-  top: 0;
-  left: 0;
 }
 
 #menu {
   display: inline;
   text-align:center;
   margin:0 auto;
-  position: relative;
 }
 #menu ul {margin:0; padding:0; list-style:none;}
 #menu ul li {
@@ -60,6 +55,7 @@ a,a:hover {
 section {
   margin:auto;
   width: 70%;
+  height:100%;
   border: 1px solid black;
 }
 

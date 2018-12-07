@@ -18,7 +18,10 @@
     	</nav>
     </div>
     <section>
-
+      <?php include('../cockpit/realTimeWeather.php') ?>
+    </section>
+    <section>
+      <?php include('../cockpit/forecastWeather.php') ?>
     </section>
     <footer>
       <p>Footer</p>
