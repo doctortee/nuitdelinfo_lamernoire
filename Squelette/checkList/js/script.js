@@ -20,7 +20,7 @@ function changeSection(sectionName)
 function addItemToList(list,name,description)
 {
 
-  name = name.replace(" ", "_")
+
   if (list == "input")
   {
     let listSelected = document.getElementById("selectList");
@@ -39,6 +39,7 @@ function addItemToList(list,name,description)
 
   let labelElement = document.createElement("LABEL");
   let labelTextNode = document.createTextNode(name);
+  name = name.replace(" ", "_")
   labelElement.appendChild(labelTextNode);
   let aElement = document.createElement("A");
   aElement.href = "#"+name;
