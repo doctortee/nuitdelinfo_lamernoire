@@ -5,11 +5,11 @@ Le projet ne nécessite qu'un serveur web avec PHP.
 
 ## 2. Utilisation
 
-Un serveur de test est disponible à l'adresse suivante : http://sigmachine.ca/
+Un serveur de test est disponible à l'adresse suivante : Lien mort
 
 __Les identifiants de bases sont :__
-ID : loginadmintest
-Mot de Passe : mDpAdm!nT3st
+ID : Aucun
+Mot de Passe : Aucun
 
 Vous pouvez naviguer entre les différentes parties via le menu en haut de l'écran.
 
